@@ -2,11 +2,10 @@
 
 /* Configuration */
 /*your web-mail*/
-$mailto  = 'your webmail here';
+$mailto  = 'iyayaudah18@gmail.com';
 
 
 $name     	= strip_tags($_POST['first_name']);
-$sub     	= strip_tags($_POST['sub']);
 $email      = strip_tags($_POST['email']);
 $comments   = strip_tags($_POST['message']);
 
@@ -17,7 +16,7 @@ $body = "
 <br>
 <p><b>Message</b>: $comments</p>
 <p><b>Name</b>: $name <br>
-<p><b>Subject</b>: $sub <br>
+<p><b>Subject</b>: ORDER <br>
 <b>Email</b>: $email<br>
 ";
 
@@ -34,10 +33,10 @@ $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 $headers2 = "From:" . $mailto;
 $message = "<html><body>$body</body></html>";
 
-if(empty($name) || empty($sub) || empty($email) || empty($comments) ){
+if(empty($name) || empty($email) || empty($comments) ){
 
     echo "Fill The Form Properly"; // message
-    header("Location: http://home-page-link"); //go to home page
+    header("Location: http://www.cctvshutter.com/"); //go to home page
     die();
     
 }
